@@ -1,0 +1,39 @@
+{
+  "name": "learning-lab",
+  "version": "1.0.0",
+  "description": "A collection of small projects and coding exercises focused on core programming concepts and problem-solving.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:staged": "lint-staged",
+    "format": "prettier --write .",
+    "format:checl": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vlad-XD/learning-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vlad-XD/learning-lab/issues"
+  },
+  "homepage": "https://github.com/Vlad-XD/learning-lab#readme",
+  "devDependencies": {
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.4",
+    "prettier": "^3.6.2"
+  }
+}

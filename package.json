@@ -4,11 +4,11 @@
   "description": "A collection of small projects and coding exercises focused on core programming concepts and problem-solving.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint \"$INIT_CWD\"",
+    "lint:fix": "eslint \"$INIT_CWD\" --fix",
     "lint:staged": "lint-staged",
-    "format": "prettier --write .",
-    "format:checl": "prettier --check .",
+    "format": "prettier --write \"$INIT_CWD\"",
+    "format:check": "prettier --check \"$INIT_CWD\"",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -24,7 +24,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Vlad-XD/learning-lab/issues"
   },

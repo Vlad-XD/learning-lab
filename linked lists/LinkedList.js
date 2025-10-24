@@ -34,7 +34,7 @@ class LinkedList {
   // adds a new node containing the passed value to the end of the list
   append(value) {
     // check if linked list is empty
-    if (this.#isEmpty()) {
+    if (this.isEmpty()) {
       const node = new Node(value);
       this.#head = node;
       this.#tail = node;
@@ -52,7 +52,7 @@ class LinkedList {
   // adds a new node containing the passed value to the start of the list
   prepend(value) {
     // check if linked list is empty
-    if (this.#isEmpty()) {
+    if (this.isEmpty()) {
       const node = new Node(value);
       this.#head = node;
       this.#tail = node;
@@ -103,7 +103,7 @@ class LinkedList {
   // removes the last element from the list
   pop() {
     // check if linked list is empty
-    if (this.#isEmpty()) {
+    if (this.isEmpty()) {
       return;
     }
 
@@ -112,6 +112,7 @@ class LinkedList {
       this.#head = null;
       this.#tail = null;
       this.#size--;
+      return;
     }
 
     // otherwise, set the penultimate node as the tail
@@ -121,7 +122,7 @@ class LinkedList {
     this.#size--;
   }
 
-  // returns true if the passed in value is in the lsit and otherwise returns false
+  // returns true if the passed in value is in the list and otherwise returns false
   contains(value) {
     // iterate through list and check value
     let currentNode = this.#head;
@@ -156,7 +157,7 @@ class LinkedList {
     let str = "";
 
     // check if linked list is empty
-    if (this.#isEmpty()) {
+    if (this.isEmpty()) {
       str = "null";
     } else {
       let currentNode = this.#head;
@@ -234,7 +235,7 @@ class LinkedList {
   }
 
   // returns true if the linked list is empty (size === 0)
-  #isEmpty() {
+  isEmpty() {
     if (this.#size === 0) {
       return true;
     } else {

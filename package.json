@@ -9,7 +9,9 @@
     "lint:staged": "lint-staged",
     "format": "prettier --write \"$INIT_CWD\"",
     "format:check": "prettier --check \"$INIT_CWD\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "jest \"$INIT_CWD\"",
+    "test:watch": "jest \"$INIT_CWD\" --watch"
   },
   "lint-staged": {
     "**/*.{js,mjs,cjs,json}": [
@@ -30,9 +32,14 @@
   },
   "homepage": "https://github.com/Vlad-XD/learning-lab#readme",
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel-jest": "^30.2.0",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jest": "^29.0.1",
     "husky": "^9.1.7",
+    "jest": "^30.2.0",
     "lint-staged": "^16.2.4",
     "prettier": "^3.6.2"
   }
